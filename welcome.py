@@ -332,16 +332,12 @@ def check(update, context, override_lock=None):
 # Print help text
 def help(update, context):
     """ Prints help text """
-    print(help_text)
     chat_id = update.effective_chat.id
     chat_str = str(chat_id)
-    print("*** step 1 ***")
-    print(chat_id)
     if (
         db.get(chat_str + "_quiet") == False
         or db.get(chat_str + "_adm") == update.message.from_user.id
     ):
-        print("sending message")
         a = update.effective_chat.send_message(help_text, disable_web_page_preview=True)
         mess = []
         mess.append(chat_id)
