@@ -10,6 +10,7 @@ The command framework was inspired by [@jh0ker_welcomebot](https://telegram.me/j
 ## Requirements
 
 - Python 3
+- Python telegram bot library (pip install python-telegram-bot)
 - PickleDB (pip install pickledb)
 - Bot must have admin permission in the group
 
